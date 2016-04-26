@@ -11,7 +11,17 @@ get '/secret' do
 end
 
 get '/colours' do
-	"<h2>I am red</h2>"
+	#a mini style guide to apply to the html below
+	'<style>
+		.red {
+			color: red;
+		}
+		.blue {
+			color: blue;
+		}
+	</style>
+	<h2 class=red>I am red</h2>
+	<h2 class=blue>I am blue</h2>'
 end
 
 get '/the_one_and_only' do
@@ -19,10 +29,6 @@ get '/the_one_and_only' do
 end
 
 get '/cat' do
-	'<style>
- 		img {border-style: dashed; border-color: red;}
-	</style>
-	<img src="http://bit.ly/1eze8aE">
-	<img src="http://bit.ly/1eze8aE">'
+	erb(:index)
 end
 
