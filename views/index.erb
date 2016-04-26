@@ -4,8 +4,13 @@
  	}
 </style>
 
-<% if @cat_name && @cat_surname %>
-  <h1>My name is <%= "#{@cat_name} " "#{@cat_surname}" %></h1>
+<form action='/named-cat'>
+	<input type='text' name='name'/>
+	<input type='submit' value='Submit'/>
+</form>
+
+<% if @cat_name %>
+  <h1>My name is <%= @cat_name %></h1>
 <% else %>
   <h1>I do not know my own name!</h1>
 <% end %>
