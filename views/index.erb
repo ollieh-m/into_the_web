@@ -3,6 +3,12 @@
  		border: 5px dashed red;
  	}
 </style>
-<h1>My name is <%=@cat_name%></h1>
+
+<% if @cat_name && @cat_surname %>
+  <h1>My name is <%= "#{@cat_name} " "#{@cat_surname}" %></h1>
+<% else %>
+  <h1>I do not know my own name!</h1>
+<% end %>
+
 <img src="http://bit.ly/1eze8aE">
 <img src="http://bit.ly/1eze8aE">

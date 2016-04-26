@@ -28,8 +28,14 @@ get '/the_one_and_only' do
 	"1"
 end
 
-get '/cat' do
+get '/random-cat' do
 	@cat_name = ["Amigo", "Oscar", "Viking"].sample
 	erb(:index)
 end
 
+get '/named-cat' do
+	p params
+	@cat_name = params[:name]
+	@cat_surname = params[:surname]
+	erb(:index)
+end
